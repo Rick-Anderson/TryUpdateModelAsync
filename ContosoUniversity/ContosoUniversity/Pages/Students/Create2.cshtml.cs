@@ -42,7 +42,7 @@ namespace ContosoUniversity.Pages.Students
 
             if (await TryUpdateModelAsync<Student>(
                 emptyStudent,
-                "",
+                "Student",
                 s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
             {
                 try
