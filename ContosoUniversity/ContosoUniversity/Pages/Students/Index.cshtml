@@ -8,21 +8,27 @@
 <h2>Index</h2>
 
 <p>
-    <a asp-page="Create">Create New</a> | <a asp-page="Create2">Create TryUpdateModelAsync</a>
-
+    <a asp-page="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Student[0].LastName)
+                    <a asp-page="./Index" asp-route-sortOrder="@ViewData["NameSort"]">
+                        @*@Html.DisplayNameFor(model => model.Student[0].LastName)*@
+                        LastName
+                    </a>
+                        </th>
+                <th>
+                    FirstMidName
+                    @*@Html.DisplayNameFor(model => model.Student[0].FirstMidName)*@
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Student[0].FirstMidName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Student[0].EnrollmentDate)
-                </th>
+                    <a asp-page="./Index" asp-route-sortOrder="@ViewData["DateSort"]">
+                        EnrollmentDate
+                    </a>
+                        @*@Html.DisplayNameFor(model => model.Student[0].EnrollmentDate)*@
+</th>
             <th></th>
         </tr>
     </thead>
